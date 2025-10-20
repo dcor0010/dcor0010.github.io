@@ -8,12 +8,15 @@
 
 <div class="content">
    <h1>The Way To Monash!</h1>
-   <iframe
-      src="TheWayToMonash.html"
-      width="1280"
-      height="720"
-      style="border:10px solid black;">
-   </iframe>
+   <script>
+   const iframe = document.createElement('iframe');
+   iframe.src = 'TheWayToMonash.html?v=' + new Date().getTime();
+   iframe.width = 1280;
+   iframe.height = 720;
+   iframe.style.border = '10px solid black';
+   document.querySelector('.content').appendChild(iframe);
+   </script>
+
 </div>
 
 </body>
